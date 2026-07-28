@@ -1,5 +1,13 @@
+import AppRoutes from "./routes/AppRoutes";
+import AnalyticsTracker from "./components/AnalyticsTracker";
+
 function App() {
-  return <h1 style={{ color: "white" }}>APP WORKING</h1>;
+  return (
+    <>
+      <AnalyticsTracker />
+      <AppRoutes />
+    </>
+  );
 }
 
 export default App;
