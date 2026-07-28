@@ -1,12 +1,8 @@
-import AppRoutes from "./routes/AppRoutes";
-import AnalyticsTracker from "./components/AnalyticsTracker";
-
 function App() {
   return (
-    <>
-      <AnalyticsTracker />
-      <AppRoutes />
-    </>
+    <h1 style={{color:"red"}}>
+      VERCEL IS WORKING
+    </h1>
   );
 }
 
