@@ -2,14 +2,14 @@ import MainLayout from "../layouts/MainLayout";
 import SEO from "../components/SEO/SEO";
 
 
-import ServiceHero from "../components/Servicespage/ServiceHero";
-import ProblemSolution from "../components/Servicespage/ProblemSolution";
-import Features from "../components/Servicespage/Features";
-import Industries from "../components/Servicespage/Industries";
-import TechStack from "../components/Servicespage/TechStack";
-import CTA from "../components/Servicespage/CTA";
+import ServiceHero from "../components/Servicepage/ServiceHero";
+import ProblemSolution from "../components/Servicepage/ProblemSolution";
+import Features from "../components/Servicepage/Features";
+import Industries from "../components/Servicepage/Industries";
+import TechStack from "../components/Servicepage/TechStack";
+import CTA from "../components/Servicepage/CTA";
 
-import { services } from "../components/Servicespage/ServiceData";
+import { services } from "../components/Servicepage/ServiceData";
 
 
 
