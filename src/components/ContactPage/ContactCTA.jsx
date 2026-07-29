@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, CalendarDays } from "lucide-react";
-import "./ContactCTA.css";
 
 export default function ContactCTA() {
   return (

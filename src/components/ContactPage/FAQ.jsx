@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import "./FAQ.css";
+
 
 const faqs = [
   { question: "How long does a project usually take?", answer: "Project timelines depend on the scope and complexity. Most websites are completed within 2–6 weeks, while larger web or mobile applications may take several months." },

@@ -1,23 +1,65 @@
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
 
 export default function FeatureCard({ item, index }) {
-  return (
-    <div className="check-row">
-      <motion.span
-        initial={{ scale: 0, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.35, delay: index * 0.12 }}
-        className="check-row__box"
-      >
-        <Check size={14} strokeWidth={3} />
-      </motion.span>
 
-      <div className="check-row__text">
-        <h3 className="check-row__title">{item.title}</h3>
-        <p className="check-row__desc">{item.description}</p>
+  const Icon = item.icon;
+
+  return (
+
+    <motion.div
+
+      initial={{ opacity:0,y:20 }}
+
+      whileInView={{ opacity:1,y:0 }}
+
+      viewport={{ once:true }}
+
+      transition={{
+        delay:index*.12
+      }}
+
+      className="group flex gap-5 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl transition-all duration-500 hover:border-[#d4af37]/40 hover:-translate-y-1"
+
+    >
+
+      <div
+        className="
+        flex
+        h-14
+        w-14
+        items-center
+        justify-center
+        rounded-2xl
+        bg-[#d4af37]/10
+        text-[#d4af37]
+        transition-transform
+        duration-500
+        group-hover:rotate-6
+        "
+      >
+
+        <Icon size={28} />
+
       </div>
-    </div>
+
+      <div>
+
+        <h3 className="mb-2 text-xl font-bold text-white">
+
+          {item.title}
+
+        </h3>
+
+        <p className="leading-7 text-gray-400">
+
+          {item.description}
+
+        </p>
+
+      </div>
+
+    </motion.div>
+
   );
+
 }

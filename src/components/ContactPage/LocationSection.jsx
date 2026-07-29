@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { companyInfo } from "./contactData";
-import "./LocationSection.css";
 
 export default function LocationSection() {
   return (

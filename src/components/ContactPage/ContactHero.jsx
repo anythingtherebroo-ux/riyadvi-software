@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Phone, Mail, CalendarDays } from "lucide-react";
 import { companyInfo } from "./contactData";
-import "./ContactHero.css";
 
 export default function ContactHero() {
   return (

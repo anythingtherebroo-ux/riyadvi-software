@@ -4,6 +4,7 @@
 
 @theme {
   --color-primary: #d4af37;
+  --color-primary-light: #f4e5a1;
   --color-dark: #080808;
   --color-card: #141414;
   --color-border: #2a2a2a;
@@ -19,6 +20,8 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -26,14 +29,10 @@ body {
   color: white;
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
+  width: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
 }
 
@@ -67,4 +66,37 @@ img {
 ::selection {
   background: #d4af37;
   color: black;
+}
+
+/* --- Premium extras --- */
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(212, 175, 55, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(212, 175, 55, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(90deg, #f4e5a1 0%, #d4af37 55%, #a9822a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Global fix: grid/flex children default to min-width: auto, which lets
+   wide intrinsic content (like the font-mono terminal card) force the
+   whole grid — and the page — wider than the viewport. This resets that
+   so columns can actually shrink to fit. */
+.grid > *,
+.flex > * {
+  min-width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

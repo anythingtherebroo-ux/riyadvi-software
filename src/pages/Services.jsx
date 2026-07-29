@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import MainLayout from "../layouts/MainLayout";
 import SEO from "../components/SEO/SEO";
 import { services } from "../components/Servicepage/ServiceData";
-import "./Services.css";
+
 
 function Services() {
   const serviceList = Object.values(services);

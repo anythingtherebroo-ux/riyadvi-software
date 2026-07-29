@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { ArrowRight, PhoneCall, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { aboutCTA } from "./aboutData";
-import "./AboutCTA.css";
 
 const benefits = [
   "Free Project Consultation",

@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { InlineWidget } from "react-calendly";
 import { CalendarDays, Clock3, Video, CheckCircle2 } from "lucide-react";
 import { companyInfo } from "./contactData";
-import "./CalendlySection.css";
 
 const benefits = [
   { icon: CalendarDays, title: "Choose Your Time", description: "Pick a date and time that fits your schedule." },

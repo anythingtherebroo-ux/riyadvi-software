@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { companyInfo } from "./contactData";
-import "./ContactCards.css";
 
 export default function ContactCards() {
   const contactCards = [

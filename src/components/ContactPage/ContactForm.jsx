@@ -13,7 +13,6 @@ import {
   Calendar,
   MessageSquare,
 } from "lucide-react";
-import "./ContactForm.css";
 
 const budgetOptions = [
   "Below ₹50,000",

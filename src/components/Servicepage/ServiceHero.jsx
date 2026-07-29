@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import "./ServiceHero.css";
 
 export default function ServiceHero({ service }) {
   const Icon = service.icon;
