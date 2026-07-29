@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
+import StickyCTA from "../components/StickyCTA/StickyCTA";
 
 function MainLayout({ children }) {
   return (
@@ -7,6 +8,7 @@ function MainLayout({ children }) {
       <Navbar />
       <main>{children}</main>
       <Footer />
+      <StickyCTA />
     </div>
   );
 }

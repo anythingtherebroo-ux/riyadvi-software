@@ -1,38 +1,26 @@
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import "./ServiceCard.css";
 
-export default function ServiceCard({ service }) {
+export default function ServiceCard({ service, index }) {
   const Icon = service.icon;
+  const code = String(index + 1).padStart(2, "0");
 
   return (
-    <motion.div
-      whileHover={{ y: -10 }}
-      transition={{ duration: 0.3 }}
-      className="group relative overflow-hidden rounded-2xl border border-[#2A2A2A] bg-[#141414] p-7 transition-all duration-500 hover:border-[#D4AF37]"
-    >
-      <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/10 to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
+    <div className="service-card">
+      <div className="service-card__accent" />
 
-      <div className="relative z-10">
-        <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-[#D4AF37]/10 transition group-hover:bg-[#D4AF37]">
-          <Icon
-            size={30}
-            className="text-[#D4AF37] transition group-hover:text-black"
-          />
-        </div>
-
-        <h3 className="mb-4 text-2xl font-semibold text-white">
-          {service.title}
-        </h3>
-
-        <p className="mb-6 leading-7 text-gray-400">
-          {service.description}
-        </p>
-
-        <button className="flex items-center gap-2 font-medium text-[#D4AF37] transition-all group-hover:gap-4">
-          Learn More
-          <ArrowRight size={18} />
-        </button>
+      <div className="service-card__top">
+        <span className="service-card__code">MOD / {code}</span>
+        <Icon size={22} className="service-card__icon" />
       </div>
-    </motion.div>
+
+      <h3 className="service-card__title">{service.title}</h3>
+      <p className="service-card__desc">{service.description}</p>
+
+      <button className="service-card__cta">
+        Get a Quote
+        <ArrowRight size={16} className="service-card__cta-arrow" />
+      </button>
+    </div>
   );
 }

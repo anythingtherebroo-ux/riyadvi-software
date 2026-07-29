@@ -7,6 +7,8 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
+import { companyInfo } from "../ContactPage/contactData";
+
 export default function CTA({ service }) {
   return (
     <section className="relative overflow-hidden bg-[#050505] py-28">
@@ -78,7 +80,7 @@ export default function CTA({ service }) {
                 </Link>
 
                 <a
-                  href="mailto:info@riyadvi.com"
+                  href={`mailto:${companyInfo.email}`}
                   className="inline-flex items-center rounded-xl border border-white/15 px-8 py-4 text-white transition hover:border-[#D4AF37] hover:text-[#D4AF37]"
                 >
                   <Mail
@@ -128,7 +130,7 @@ export default function CTA({ service }) {
                 whileHover={{
                   y: -6,
                 }}
-                href="https://wa.me/919999999999"
+                href={`https://wa.me/${companyInfo.whatsapp}`}
                 target="_blank"
                 rel="noreferrer"
                 className="block rounded-3xl border border-[#25D366]/20 bg-[#25D366]/10 p-8 backdrop-blur-xl transition hover:border-[#25D366]"

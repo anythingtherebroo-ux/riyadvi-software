@@ -1,139 +1,56 @@
 import { motion } from "framer-motion";
-import {
-  Briefcase,
-  Users,
-  Smile,
-  Globe,
-} from "lucide-react";
+import { Briefcase, Users, Smile, Globe } from "lucide-react";
+import "./Stats.css";
 
 const stats = [
-  {
-    icon: Briefcase,
-    number: "50+",
-    label: "Projects Delivered",
-  },
-  {
-    icon: Users,
-    number: "30+",
-    label: "Happy Clients",
-  },
-  {
-    icon: Smile,
-    number: "98%",
-    label: "Client Satisfaction",
-  },
-  {
-    icon: Globe,
-    number: "10+",
-    label: "Industries Served",
-  },
+  { icon: Briefcase, number: "50+", label: "Projects Delivered" },
+  { icon: Users, number: "30+", label: "Happy Clients" },
+  { icon: Smile, number: "98%", label: "Client Satisfaction" },
+  { icon: Globe, number: "10+", label: "Industries Served" },
 ];
 
 export default function Stats() {
   return (
-    <section className="relative overflow-hidden bg-[#050505] py-28">
-
-      {/* Background Glow */}
-
-      <div className="absolute left-0 top-0 h-[420px] w-[420px] rounded-full bg-[#D4AF37]/10 blur-[160px]" />
-
-      <div className="absolute right-0 bottom-0 h-[420px] w-[420px] rounded-full bg-[#D4AF37]/10 blur-[160px]" />
-
-      <div className="relative mx-auto max-w-7xl px-6">
-
-        {/* Heading */}
-
+    <section className="impact-stats">
+      <div className="impact-stats__inner">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mx-auto mb-20 max-w-3xl text-center"
+          transition={{ duration: 0.6 }}
+          className="impact-stats__header"
         >
-
-          <span className="rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/10 px-5 py-2 text-sm font-semibold uppercase tracking-widest text-[#D4AF37]">
+          <span className="impact-stats__eyebrow">
+            <span className="impact-stats__eyebrow-dash" />
             Our Impact
           </span>
-
-          <h2 className="mt-8 text-5xl font-black text-white">
-            Numbers That
-            <span className="block text-[#D4AF37]">
-              Speak for Themselves
-            </span>
+          <h2 className="impact-stats__title">
+            Numbers That <span className="impact-stats__title-accent">Speak for Themselves</span>
           </h2>
-
-          <p className="mt-8 text-lg leading-8 text-gray-400">
-            Every project represents our commitment to quality,
-            innovation and long-term client success.
-          </p>
-
         </motion.div>
 
-        {/* Stats Grid */}
-
-        <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-4">
-
-          {stats.map((item, index) => {
-
-            const Icon = item.icon;
-
-            return (
-
-              <motion.div
-                key={item.label}
-                initial={{
-                  opacity: 0,
-                  y: 50,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                viewport={{
-                  once: true,
-                }}
-                transition={{
-                  delay: index * 0.15,
-                  duration: 0.7,
-                }}
-                whileHover={{
-                  y: -8,
-                  scale: 1.02,
-                }}
-                className="rounded-[32px] border border-white/10 bg-[#0A0A0A] p-10 text-center transition-all duration-500 hover:border-[#D4AF37]/40 hover:shadow-[0_0_40px_rgba(212,175,55,.18)]"
-              >
-
-                <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-3xl bg-[#D4AF37]/10">
-
-                  <Icon
-                    size={38}
-                    className="text-[#D4AF37]"
-                  />
-
-                </div>
-
-                <h3 className="mt-8 text-5xl font-black text-[#D4AF37]">
-
-                  {item.number}
-
-                </h3>
-
-                <p className="mt-4 text-lg text-gray-400">
-
-                  {item.label}
-
-                </p>
-
-              </motion.div>
-
-            );
-
-          })}
-
-        </div>
-
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="impact-stats__panel"
+        >
+          <div className="impact-stats__panel-header">
+            <span>riyadvi@impact</span>
+            <span className="impact-stats__panel-status">live</span>
+          </div>
+          <div className="impact-stats__grid">
+            {stats.map((item) => (
+              <div className="impact-stats__cell" key={item.label}>
+                <item.icon size={20} className="impact-stats__icon" />
+                <h3>{item.number}</h3>
+                <p>{item.label}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
-
     </section>
   );
 }

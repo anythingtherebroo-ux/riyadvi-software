@@ -1,54 +1,48 @@
 import { motion } from "framer-motion";
 import { services } from "./ServiceData";
 import ServiceCard from "./ServiceCard";
+import "./Service.css";
 
 export default function Service() {
   return (
-    <section
-      id="services"
-      className="bg-[#080808] py-24"
-    >
-      <div className="mx-auto max-w-7xl px-6">
-
+    <section id="services" className="services">
+      <div className="services__inner">
         <motion.div
-          initial={{ opacity: 0, y: 60 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: .6 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mx-auto mb-16 max-w-3xl text-center"
+          className="services__header"
         >
-          <span className="rounded-full border border-[#D4AF37] px-4 py-2 text-sm text-[#D4AF37]">
-            OUR SERVICES
+          <span className="services__eyebrow">
+            <span className="services__eyebrow-dash" />
+            Our Services
           </span>
 
-          <h2 className="mt-6 text-4xl font-bold text-white lg:text-5xl">
+          <h2 className="services__title">
             Transforming Ideas Into
-            <span className="text-[#D4AF37]"> Digital Solutions</span>
+            <span className="services__title-accent"> Digital Solutions</span>
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-gray-400">
+          <p className="services__subtext">
             We deliver cutting-edge software solutions that help businesses
-            innovate, grow and succeed in today's digital world.
+            innovate, grow and succeed in today&apos;s digital world.
           </p>
         </motion.div>
 
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+        <div className="services__grid">
           {services.map((service, index) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 80 }}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: .5,
-                delay: index * .12,
-              }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <ServiceCard service={service} />
+              <ServiceCard service={service} index={index} />
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );

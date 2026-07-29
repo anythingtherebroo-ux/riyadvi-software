@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   Building2,
   GraduationCap,
@@ -143,13 +144,16 @@ export default function Industries({ service }) {
                         business growth.
                       </p>
 
-                      <button className="mt-8 flex items-center gap-2 font-semibold text-[#D4AF37] transition hover:gap-4">
+                      <Link
+                        to="/contact"
+                        className="mt-8 inline-flex items-center gap-2 font-semibold text-[#D4AF37] transition hover:gap-4"
+                      >
 
                         Explore Solutions
 
                         <ArrowRight size={18} />
 
-                      </button>
+                      </Link>
 
                     </div>
 

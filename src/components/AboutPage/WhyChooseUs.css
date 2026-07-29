@@ -1,0 +1,148 @@
+.diff-section {
+  background: var(--color-dark);
+  padding: 6rem 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.12);
+}
+
+.diff-section__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.diff-section__header {
+  max-width: 42rem;
+  margin: 0 auto 3.5rem;
+  text-align: center;
+}
+
+.diff-section__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.diff-section__eyebrow-dash {
+  width: 24px;
+  height: 1px;
+  background: var(--color-primary);
+}
+
+.diff-section__title {
+  margin-top: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2.25rem;
+  color: #fff;
+}
+
+.diff-section__title-accent {
+  color: var(--color-primary);
+}
+
+.diff-section__subtext {
+  margin-top: 1.25rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-muted);
+}
+
+.diff-section__grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+.diff-card {
+  padding: 1.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-card);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.diff-card:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+  transform: translateY(-4px);
+}
+
+.diff-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.diff-card__code {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+}
+
+.diff-card__icon {
+  color: var(--color-primary);
+}
+
+.diff-card h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.diff-card p {
+  margin-top: 0.75rem;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--color-muted);
+}
+
+.diff-section__commitment {
+  margin-top: 3.5rem;
+  padding: 2.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-card);
+  text-align: center;
+}
+
+.diff-section__commitment h3 {
+  margin-top: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: #fff;
+}
+
+.diff-section__commitment p {
+  margin-top: 1rem;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-muted);
+}
+
+@media (min-width: 768px) {
+  .diff-section__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .diff-section__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

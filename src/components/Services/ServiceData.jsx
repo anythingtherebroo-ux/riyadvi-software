@@ -1,11 +1,4 @@
-import {
-  Globe,
-  Smartphone,
-  Palette,
-  Database,
-  Cloud,
-  ShieldCheck,
-} from "lucide-react";
+import { Globe, Smartphone, Megaphone, Glasses, Box, Palette } from "lucide-react";
 
 export const services = [
   {
@@ -24,30 +17,30 @@ export const services = [
   },
   {
     id: 3,
-    icon: Palette,
+    icon: Megaphone,
     title: "Digital Marketing",
     description:
-      "Beautiful user interfaces focused on usability and exceptional user experience.",
+      "Data-driven campaigns, SEO and social strategy that turn visibility into leads.",
   },
   {
     id: 4,
-    icon: Database,
+    icon: Glasses,
     title: "AR/VR",
     description:
-      "Secure APIs, databases and scalable server-side architecture for your business.",
+      "Immersive augmented and virtual reality experiences for training, retail and product demos.",
   },
   {
     id: 5,
-    icon: Cloud,
+    icon: Box,
     title: "3D Modeling",
     description:
-      "Cloud deployment, DevOps, hosting and infrastructure optimization.",
+      "Photorealistic 3D assets and product visualizations for web, app and marketing use.",
   },
   {
     id: 6,
-    icon: ShieldCheck,
+    icon: Palette,
     title: "UI/UX Design",
     description:
-      "Continuous monitoring, updates and long-term technical support.",
+      "Beautiful, usable interfaces designed around real user behavior and business goals.",
   },
 ];

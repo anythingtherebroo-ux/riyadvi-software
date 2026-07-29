@@ -1,0 +1,134 @@
+.mission-vision {
+  background: var(--color-dark);
+  padding: 6rem 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.12);
+}
+
+.mission-vision__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.mission-vision__header {
+  max-width: 42rem;
+  margin: 0 auto 3.5rem;
+  text-align: center;
+}
+
+.mission-vision__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.mission-vision__eyebrow-dash {
+  width: 24px;
+  height: 1px;
+  background: var(--color-primary);
+}
+
+.mission-vision__title {
+  margin-top: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.mission-vision__title-accent {
+  color: var(--color-primary);
+}
+
+.mission-vision__subtext {
+  margin-top: 1.25rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-muted);
+}
+
+.mission-vision__grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+.mission-vision__card {
+  padding: 2.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-card);
+  transition: border-color 0.3s ease;
+}
+
+.mission-vision__card:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+.mission-vision__card-icon {
+  display: inline-flex;
+  width: 56px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  color: var(--color-primary);
+}
+
+.mission-vision__card h3 {
+  margin-top: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.mission-vision__card p {
+  margin-top: 1rem;
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-muted);
+}
+
+.mission-vision__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.mission-vision__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.75rem;
+  border-radius: 6px;
+  background: var(--color-primary);
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform 0.25s ease;
+}
+
+.mission-vision__link:hover {
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .mission-vision__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

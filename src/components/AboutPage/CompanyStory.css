@@ -1,0 +1,150 @@
+.company-story {
+  background: var(--color-dark);
+  padding: 6rem 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.12);
+}
+
+.company-story__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: grid;
+  gap: 3rem;
+}
+
+.company-story__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.company-story__eyebrow-dash {
+  width: 24px;
+  height: 1px;
+  background: var(--color-primary);
+}
+
+.company-story__title {
+  margin-top: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2.1rem;
+  line-height: 1.25;
+  color: #fff;
+}
+
+.company-story__title-accent {
+  color: var(--color-primary);
+}
+
+.company-story__text {
+  margin-top: 1.25rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-muted);
+}
+
+.company-story__achievement {
+  margin-top: 2rem;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--color-card);
+}
+
+.company-story__achievement-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--color-muted);
+}
+
+.company-story__achievement-status {
+  color: var(--color-primary);
+}
+
+.company-story__achievement-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  padding: 1.5rem 1.25rem;
+  color: var(--color-primary);
+}
+
+.company-story__achievement-body h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.company-story__achievement-body p {
+  margin-top: 0.4rem;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.company-story__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.company-story__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.company-story__row:last-child {
+  border-bottom: none;
+}
+
+.company-story__row-icon {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  color: var(--color-primary);
+}
+
+.company-story__row h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.company-story__row p {
+  margin-top: 0.4rem;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-muted);
+}
+
+@media (min-width: 1024px) {
+  .company-story__inner {
+    grid-template-columns: 1fr 1fr;
+  }
+  .company-story__title {
+    font-size: 2.5rem;
+  }
+}

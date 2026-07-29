@@ -290,3 +290,21 @@ export const services = {
     }
 
 };
+
+// Flat array (in a fixed display order) for the Services listing page,
+// so we don't have to keep a second, separate data file in sync.
+export const servicesList = [
+    services.web,
+    services.app,
+    services.uiux,
+    services.marketing,
+    services.arvr,
+    services.modeling,
+];
+
+// Look up a service by its URL slug (e.g. "web-development").
+// Returns undefined if no service matches, so callers can render a
+// "not found" state instead of crashing.
+export function getServiceBySlug(slug) {
+    return servicesList.find((service) => service.slug === slug);
+}

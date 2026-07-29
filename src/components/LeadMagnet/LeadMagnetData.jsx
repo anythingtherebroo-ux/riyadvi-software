@@ -1,53 +1,40 @@
-import {
-  FiClipboard,
-  FiDollarSign,
-  FiClock,
-  FiCode,
-  FiShield,
-  FiCheckCircle,
-} from "react-icons/fi";
+import { ClipboardList, DollarSign, Clock, Code2, Shield, CheckCircle2 } from "lucide-react";
 
 export const guideFeatures = [
   {
     id: 1,
-    icon: FiClipboard,
+    icon: ClipboardList,
     title: "Project Requirement Checklist",
-    description:
-      "Define business goals, features, and user requirements before development.",
+    description: "Define business goals, features, and user requirements before development.",
   },
   {
     id: 2,
-    icon: FiDollarSign,
+    icon: DollarSign,
     title: "Budget Planning",
-    description:
-      "Estimate development costs and allocate your project budget effectively.",
+    description: "Estimate development costs and allocate your project budget effectively.",
   },
   {
     id: 3,
-    icon: FiClock,
+    icon: Clock,
     title: "Timeline Planning",
-    description:
-      "Understand project milestones from planning to deployment.",
+    description: "Understand project milestones from planning to deployment.",
   },
   {
     id: 4,
-    icon: FiCode,
+    icon: Code2,
     title: "Technology Selection",
-    description:
-      "Choose the right technologies based on scalability and business needs.",
+    description: "Choose the right technologies based on scalability and business needs.",
   },
   {
     id: 5,
-    icon: FiShield,
+    icon: Shield,
     title: "Risk Assessment",
-    description:
-      "Identify common development risks and avoid costly mistakes.",
+    description: "Identify common development risks and avoid costly mistakes.",
   },
   {
     id: 6,
-    icon: FiCheckCircle,
+    icon: CheckCircle2,
     title: "Deployment Checklist",
-    description:
-      "Launch confidently with a complete deployment preparation checklist.",
+    description: "Launch confidently with a complete deployment preparation checklist.",
   },
 ];

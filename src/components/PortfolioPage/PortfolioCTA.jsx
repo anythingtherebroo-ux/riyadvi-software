@@ -7,6 +7,8 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
+import { companyInfo } from "../ContactPage/contactData";
+
 export default function PortfolioCTA() {
   return (
     <section className="relative overflow-hidden bg-black py-28">
@@ -103,7 +105,7 @@ export default function PortfolioCTA() {
                 </Link>
 
                 <a
-                  href="https://wa.me/919999999999"
+                  href={`https://wa.me/${companyInfo.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center rounded-xl border border-white/15 px-8 py-4 text-white transition hover:border-[#25D366] hover:text-[#25D366]"

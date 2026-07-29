@@ -1,0 +1,136 @@
+.process-section {
+  background: var(--color-dark);
+  padding: 6rem 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.12);
+}
+
+.process-section__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.process-section__header {
+  max-width: 42rem;
+  margin: 0 auto 3.5rem;
+  text-align: center;
+}
+
+.process-section__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.process-section__eyebrow-dash {
+  width: 24px;
+  height: 1px;
+  background: var(--color-primary);
+}
+
+.process-section__title {
+  margin-top: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2.25rem;
+  color: #fff;
+}
+
+.process-section__title-accent {
+  color: var(--color-primary);
+}
+
+.process-section__subtext {
+  margin-top: 1.25rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-muted);
+}
+
+.process-section__grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+.process-card {
+  position: relative;
+  padding: 2rem 1.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-card);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.process-card:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+  transform: translateY(-4px);
+}
+
+.process-card__step {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.75rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: rgba(212, 175, 55, 0.15);
+}
+
+.process-card__icon {
+  color: var(--color-primary);
+}
+
+.process-card h3 {
+  margin-top: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.process-card p {
+  margin-top: 0.75rem;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--color-muted);
+}
+
+.process-section__tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.process-section__tags span {
+  padding: 0.6rem 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-primary);
+}
+
+@media (min-width: 768px) {
+  .process-section__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .process-section__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
