@@ -1,8 +1,8 @@
 import MainLayout from "../layouts/MainLayout";
 import SEO from "../components/SEO/SEO";
-import PortfolioHero from "../components/Portfoliopage/PortfolioHero";
-import PortfolioGrid from "../components/Portfoliopage/PortfolioGrid";
-import PortfolioCTA from "../components/Portfoliopage/PortfolioCTA";
+import PortfolioHero from "../components/PortfolioPage/PortfolioHero";
+import PortfolioGrid from "../components/PortfolioPage/PortfolioGrid";
+import PortfolioCTA from "../components/PortfolioPage/PortfolioCTA";
 
 function Portfolio() {
   return (
