@@ -5,7 +5,7 @@ import { aboutCTA } from "./aboutData";
 
 const benefits = [
   "Free Project Consultation",
-  "Custom Development Strategyyyyyyyyyyy",
+  "Custom Development Strategy",
   "Transparent Pricing",
   "Dedicated Technical Support",
 ];
