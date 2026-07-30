@@ -1,158 +1,97 @@
 import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  ChevronRight,
-  Briefcase,
-  Users,
-  Award,
-  Rocket,
-} from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
-
-const stats = [
-  {
-    icon: Briefcase,
-    number: "50+",
-    label: "Projects Delivered",
-  },
-  {
-    icon: Users,
-    number: "30+",
-    label: "Happy Clients",
-  },
-  {
-    icon: Award,
-    number: "98%",
-    label: "Client Satisfaction",
-  },
-  {
-    icon: Rocket,
-    number: "2021",
-    label: "Founded",
-  },
-];
+import { Link } from "react-router-dom";
+import { ChevronRight, Sparkles, Target, Users, Award } from "lucide-react";
 
 export default function AboutHero() {
-  const navigate = useNavigate();
-
-  const handleStartProject = () => {
-    const contactSection =
-      document.getElementById("contact-form") ||
-      document.getElementById("contact");
-
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    } else {
-      navigate("/contact");
-    }
-  };
-
   return (
-    <section className="relative overflow-hidden bg-[#080808] pt-40 pb-28 text-white">
-      {/* Background Glow */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute left-0 top-0 h-[450px] w-[450px] rounded-full bg-[#d4af37]/5 blur-[180px]" />
-        <div className="absolute bottom-0 right-0 h-[520px] w-[520px] rounded-full bg-[#d4af37]/10 blur-[180px]" />
+    <section className="relative overflow-hidden bg-[#080808] pt-36 sm:pt-40 lg:pt-44 pb-20 sm:pb-28 text-white">
+      {/* Ambient Background Glows */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -top-32 left-1/2 h-[550px] w-[550px] -translate-x-1/2 rounded-full bg-[#d4af37]/15 blur-[160px]" />
+        <div className="absolute right-0 bottom-0 h-[400px] w-[400px] rounded-full bg-[#d4af37]/5 blur-[140px]" />
+        <div
+          className="absolute inset-0 opacity-[0.04]"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(255,255,255,.12) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255,255,255,.12) 1px, transparent 1px)
+            `,
+            backgroundSize: "60px 60px",
+          }}
+        />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="mb-10 flex items-center gap-2 text-sm text-gray-400 font-medium"
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mb-8 flex items-center gap-2 text-xs sm:text-sm text-gray-400 font-medium"
         >
-          <Link to="/" className="hover:text-[#d4af37] transition">
+          <Link to="/" className="transition hover:text-[#d4af37]">
             Home
           </Link>
-          <ChevronRight size={15} />
-          <span className="text-[#d4af37]">About</span>
+          <ChevronRight size={14} className="text-gray-600" />
+          <span className="text-[#d4af37]">About Us</span>
         </motion.div>
 
-        <div className="grid items-center gap-16 lg:grid-cols-2">
-          {/* Left */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <span className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.25em] text-[#d4af37]">
-              <span className="h-[2px] w-10 bg-[#d4af37]" />
-              About Riyadvi
+        {/* Content Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="mx-auto max-w-3xl text-center"
+        >
+          <div className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-[#d4af37]/30 bg-white/5 px-4 py-2 backdrop-blur-md shadow-[0_0_20px_rgba(212,175,55,0.1)]">
+            <Sparkles className="text-[#d4af37]" size={16} />
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#d4af37] sm:text-sm">
+              Empowering Digital Transformation
             </span>
+          </div>
 
-            <h1 className="mt-7 text-5xl font-bold leading-tight text-white lg:text-6xl font-poppins">
-              Building{" "}
-              <span className="text-[#d4af37]">Digital Experiences</span>
-              <br />
-              That Drive Growth
-            </h1>
+          <h1 className="font-poppins text-4xl font-extrabold leading-tight text-white sm:text-6xl lg:text-6xl">
+            Architecting the Future of{" "}
+            <span className="bg-gradient-to-r from-[#d4af37] via-yellow-300 to-[#d4af37] bg-clip-text text-transparent">
+              Digital Innovation
+            </span>
+          </h1>
 
-            <p className="mt-8 max-w-xl text-lg leading-9 text-gray-400">
-              Founded in 2021, Riyadvi Software Technologies develops premium
-              websites, mobile apps, enterprise software, UI/UX, branding,
-              and digital marketing solutions for ambitious businesses.
-            </p>
+          <p className="mt-6 text-base leading-relaxed text-gray-300 sm:text-lg sm:leading-8">
+            At Riyadvi Software Technologies, we combine cutting-edge software engineering, high-impact design, and strategic vision to build products that scale.
+          </p>
+        </motion.div>
 
-            <div className="mt-12 flex flex-wrap gap-5">
-              <button
-                onClick={handleStartProject}
-                className="inline-flex items-center gap-3 rounded-full bg-[#d4af37] px-8 py-4 font-semibold text-black transition hover:scale-105 hover:shadow-[0_0_35px_rgba(212,175,55,0.45)]"
-              >
-                <span>Let's Work Together</span>
-                <ArrowRight size={18} />
-              </button>
-
-              <Link
-                to="/portfolio"
-                className="rounded-full border border-[#d4af37]/30 px-8 py-4 font-semibold text-white transition hover:bg-[#d4af37] hover:text-black"
-              >
-                View Portfolio
-              </Link>
+        {/* Highlights */}
+        <motion.div
+          initial={{ opacity: 0, y: 35 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-3 lg:gap-8"
+        >
+          <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-8 backdrop-blur-xl text-center">
+            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl border border-[#d4af37]/20 bg-[#d4af37]/10 text-[#d4af37]">
+              <Target size={28} />
             </div>
-          </motion.div>
+            <h3 className="font-poppins text-xl font-bold text-white">Mission-Driven</h3>
+            <p className="mt-2 text-sm text-gray-400">Delivering world-class tech products engineered for growth.</p>
+          </div>
 
-          {/* Right */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
-          >
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl shadow-2xl">
-              <div className="mb-8 flex items-center justify-between border-b border-white/10 pb-5">
-                <span className="text-gray-300 font-mono text-sm">
-                  riyadvi@overview
-                </span>
-                <span className="rounded-full bg-[#d4af37]/20 px-4 py-1 text-sm font-semibold text-[#d4af37]">
-                  Since 2021
-                </span>
-              </div>
-
-              <div className="grid grid-cols-2 gap-6">
-                {stats.map((item) => {
-                  const Icon = item.icon;
-
-                  return (
-                    <div
-                      key={item.label}
-                      className="rounded-2xl border border-white/10 bg-black/20 p-6 transition duration-300 hover:border-[#d4af37]/40 hover:-translate-y-2"
-                    >
-                      <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#d4af37]/10">
-                        <Icon size={22} className="text-[#d4af37]" />
-                      </div>
-
-                      <h2 className="text-3xl font-bold text-white font-poppins">
-                        {item.number}
-                      </h2>
-
-                      <p className="mt-2 text-gray-400 text-sm">{item.label}</p>
-                    </div>
-                  );
-                })}
-              </div>
+          <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-8 backdrop-blur-xl text-center">
+            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl border border-[#d4af37]/20 bg-[#d4af37]/10 text-[#d4af37]">
+              <Users size={28} />
             </div>
-          </motion.div>
-        </div>
+            <h3 className="font-poppins text-xl font-bold text-white">Expert Team</h3>
+            <p className="mt-2 text-sm text-gray-400">Engineers, designers, and strategists with deep domain skills.</p>
+          </div>
+
+          <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-8 backdrop-blur-xl text-center">
+            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl border border-[#d4af37]/20 bg-[#d4af37]/10 text-[#d4af37]">
+              <Award size={28} />
+            </div>
+            <h3 className="font-poppins text-xl font-bold text-white">Excellence Focused</h3>
+            <p className="mt-2 text-sm text-gray-400">Trusted by startups and enterprises across the globe.</p>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

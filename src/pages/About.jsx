@@ -1,17 +1,17 @@
 import MainLayout from "../layouts/MainLayout";
 import SEO from "../components/SEO/SEO";
 
-import AboutHero from "../components/Aboutpage/AboutHero";
-import CompanyStory from "../components/Aboutpage/CompanyStory";
-import MissionVision from "../components/Aboutpage/MissionVision";
-import AwardsSection from "../components/Aboutpage/AwardsSection"; // <-- Notice 'AwardsSection' with an 's'
-import CoreValues from "../components/Aboutpage/CoreValues";
-import Stats from "../components/Aboutpage/Stats";
-import Timeline from "../components/Aboutpage/Timeline";
-import WhyChooseUs from "../components/Aboutpage/WhyChooseUs";
-import WorkProcess from "../components/Aboutpage/WorkProcess";
-import TeamSection from "../components/Aboutpage/TeamSection";
-import AboutCTA from "../components/Aboutpage/AboutCTA";
+import AboutHero from "../components/AboutPage/AboutHero";
+import CompanyStory from "../components/AboutPage/CompanyStory";
+import MissionVision from "../components/AboutPage/MissionVision";
+import AwardsSection from "../components/AboutPage/AwardsSection";
+import CoreValues from "../components/AboutPage/CoreValues";
+import Stats from "../components/AboutPage/Stats";
+import Timeline from "../components/AboutPage/Timeline";
+import WhyChooseUs from "../components/AboutPage/WhyChooseUs";
+import WorkProcess from "../components/AboutPage/WorkProcess";
+import TeamSection from "../components/AboutPage/TeamSection";
+import AboutCTA from "../components/AboutPage/AboutCTA";
 
 function About() {
   return (
@@ -27,7 +27,7 @@ function About() {
         <AboutHero />
         <CompanyStory />
         <MissionVision />
-        <AwardsSection /> {/* <-- Fixed here */}
+        <AwardsSection /> 
         <CoreValues />
         <Stats />
         <Timeline />
