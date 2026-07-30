@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import MainLayout from "../layouts/MainLayout";
 import SEO from "../components/SEO/SEO";
-import projects from "../components/Portfoliopage/portfolioData";
+import projects from "../components/PortfolioPage/portfolioData";
 
 export default function PortfolioDetail() {
   const { slug } = useParams();
