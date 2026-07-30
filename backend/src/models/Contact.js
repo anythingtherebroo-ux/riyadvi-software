@@ -24,6 +24,14 @@ const contactSchema = new mongoose.Schema(
       type: String,
       default: "",
     },
+    budget: {
+      type: String,
+      default: "",
+    },
+    timeline: {
+      type: String,
+      default: "",
+    },
     message: {
       type: String,
       required: true,

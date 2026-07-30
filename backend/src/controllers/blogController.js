@@ -153,7 +153,7 @@ message:error.message
 
 
 
-// UPDATE BLOG
+
 
 const updateBlog = async(req,res)=>{
 

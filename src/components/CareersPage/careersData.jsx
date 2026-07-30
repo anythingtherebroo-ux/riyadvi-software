@@ -9,12 +9,7 @@ export const careers = [
     mode: "Hybrid",
     salary: "₹8L – ₹12L",
     posted: "2 days ago",
-    skills: [
-      "React",
-      "JavaScript",
-      "Tailwind CSS",
-      "REST API",
-    ],
+    skills: ["React", "JavaScript", "Tailwind CSS", "REST API"],
     description:
       "Build scalable React applications and collaborate with designers and backend engineers.",
   },
@@ -28,12 +23,7 @@ export const careers = [
     mode: "Remote",
     salary: "₹6L – ₹9L",
     posted: "5 days ago",
-    skills: [
-      "Figma",
-      "Adobe XD",
-      "Prototyping",
-      "Design Systems",
-    ],
+    skills: ["Figma", "Adobe XD", "Prototyping", "Design Systems"],
     description:
       "Create intuitive user experiences and modern interfaces for web and mobile products.",
   },
@@ -47,12 +37,7 @@ export const careers = [
     mode: "Hybrid",
     salary: "₹10L – ₹16L",
     posted: "1 week ago",
-    skills: [
-      "Python",
-      "TensorFlow",
-      "OpenAI",
-      "LangChain",
-    ],
+    skills: ["Python", "TensorFlow", "OpenAI", "LangChain"],
     description:
       "Develop AI-powered applications, chatbots and intelligent automation solutions.",
   },
@@ -66,12 +51,7 @@ export const careers = [
     mode: "Remote",
     salary: "₹4L – ₹7L",
     posted: "3 days ago",
-    skills: [
-      "SEO",
-      "Google Ads",
-      "Analytics",
-      "Social Media",
-    ],
+    skills: ["SEO", "Google Ads", "Analytics", "Social Media"],
     description:
       "Plan and execute digital marketing campaigns that drive growth and engagement.",
   },
@@ -85,12 +65,7 @@ export const careers = [
     mode: "On-site",
     salary: "₹3L – ₹6L",
     posted: "6 days ago",
-    skills: [
-      "CRM",
-      "Communication",
-      "Lead Generation",
-      "Negotiation",
-    ],
+    skills: ["CRM", "Communication", "Lead Generation", "Negotiation"],
     description:
       "Build client relationships, generate leads and help businesses discover Riyadvi's services.",
   },
@@ -104,12 +79,7 @@ export const careers = [
     mode: "Remote",
     salary: "Paid Internship",
     posted: "Today",
-    skills: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React",
-    ],
+    skills: ["HTML", "CSS", "JavaScript", "React"],
     description:
       "Learn modern web development while contributing to real client projects under experienced mentors.",
   },

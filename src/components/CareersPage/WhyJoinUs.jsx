@@ -6,6 +6,7 @@ import {
   Users,
   Award,
   HeartHandshake,
+  Sparkles,
 } from "lucide-react";
 
 const benefits = [
@@ -55,109 +56,66 @@ const benefits = [
 
 export default function WhyJoinUs() {
   return (
-    <section className="relative overflow-hidden bg-[#050505] py-28">
+    <section className="relative overflow-hidden bg-[#050505] py-24 sm:py-32 text-white">
+      <div className="pointer-events-none absolute left-0 top-0 h-[450px] w-[450px] rounded-full bg-[#d4af37]/10 blur-[170px]" />
+      <div className="pointer-events-none absolute right-0 bottom-0 h-[450px] w-[450px] rounded-full bg-[#d4af37]/10 blur-[170px]" />
 
-      {/* Background */}
-
-      <div className="absolute left-0 top-0 h-[450px] w-[450px] rounded-full bg-[#D4AF37]/10 blur-[170px]" />
-
-      <div className="absolute right-0 bottom-0 h-[450px] w-[450px] rounded-full bg-[#D4AF37]/10 blur-[170px]" />
-
-      <div className="relative mx-auto max-w-7xl px-6">
-
-        {/* Heading */}
-
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 35 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mx-auto mb-20 max-w-3xl text-center"
+          className="mx-auto mb-16 max-w-3xl text-center sm:mb-20"
         >
-
-          <span className="rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/10 px-5 py-2 text-sm font-semibold uppercase tracking-widest text-[#D4AF37]">
-
-            Why Join Riyadvi
-
-          </span>
-
-          <h2 className="mt-8 text-5xl font-black text-white">
-
-            Grow Your Career
-
-            <span className="block text-[#D4AF37]">
-
-              With Purpose
-
+          <div className="mb-4 inline-flex items-center gap-2.5 rounded-full border border-[#d4af37]/30 bg-white/5 px-4 py-2 backdrop-blur-md shadow-[0_0_20px_rgba(212,175,55,0.1)]">
+            <Sparkles className="text-[#d4af37]" size={16} />
+            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#d4af37] sm:text-sm">
+              Why Join Riyadvi
             </span>
+          </div>
 
+          <h2 className="font-poppins text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
+            Grow Your Career <span className="text-[#d4af37]">With Purpose</span>
           </h2>
 
-          <p className="mt-8 text-lg leading-8 text-gray-400">
-
-            At Riyadvi, you'll solve real-world challenges, collaborate with talented
-            professionals and build innovative digital products that make an impact.
-
+          <p className="mt-6 text-base leading-relaxed text-gray-400 sm:text-lg sm:leading-8">
+            At Riyadvi, you'll solve real-world challenges, collaborate with
+            talented professionals and build innovative digital products that make
+            an impact.
           </p>
-
         </motion.div>
 
-        {/* Benefit Cards */}
-
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-
+        <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 xl:grid-cols-3">
           {benefits.map((benefit, index) => {
-
             const Icon = benefit.icon;
 
             return (
-
               <motion.div
                 key={benefit.id}
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 0, y: 35 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{
-                  delay: index * 0.08,
-                  duration: 0.6,
-                }}
-                whileHover={{
-                  y: -10,
-                }}
-                className="group rounded-[30px] border border-white/10 bg-[#0B0B0B] p-8 transition-all duration-500 hover:border-[#D4AF37]/40 hover:shadow-[0_0_40px_rgba(212,175,55,.18)]"
+                transition={{ delay: index * 0.08, duration: 0.6 }}
+                whileHover={{ y: -6 }}
+                className="group rounded-3xl border border-white/10 bg-white/[0.04] p-7 backdrop-blur-xl transition-all duration-500 hover:border-[#d4af37]/40 hover:bg-white/[0.07] hover:shadow-[0_20px_60px_rgba(212,175,55,0.15)] sm:p-8"
               >
-
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#D4AF37]/10 transition group-hover:bg-[#D4AF37]">
-
-                  <Icon
-                    size={30}
-                    className="text-[#D4AF37] transition group-hover:text-black"
-                  />
-
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#d4af37]/20 bg-[#d4af37]/10 text-[#d4af37] transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110">
+                  <Icon size={28} />
                 </div>
 
-                <h3 className="mt-8 text-2xl font-bold text-white">
-
+                <h3 className="mt-6 font-poppins text-2xl font-bold text-white transition-colors duration-300 group-hover:text-[#d4af37]">
                   {benefit.title}
-
                 </h3>
 
-                <p className="mt-5 leading-8 text-gray-400">
-
+                <p className="mt-3 text-sm leading-relaxed text-gray-400">
                   {benefit.description}
-
                 </p>
-
               </motion.div>
-
             );
-
           })}
-
         </div>
-
       </div>
-
     </section>
   );
 }

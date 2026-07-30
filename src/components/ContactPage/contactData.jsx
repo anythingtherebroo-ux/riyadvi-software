@@ -21,7 +21,7 @@ export const companyInfo = {
     instagram: "https://instagram.com/riyadvi",
     facebook: "https://facebook.com/riyadvi",
   },
-  // TODO: replace with your real Calendly username before launch
+  // Replace with your actual Calendly link when ready:
   calendly: "https://calendly.com/YOUR_USERNAME/30min",
 };
 
@@ -37,17 +37,14 @@ export const services = [
 export const faqData = [
   {
     question: "How long does a project take?",
-    answer:
-      "Most projects are delivered between 2–8 weeks depending on scope.",
+    answer: "Most projects are delivered between 2–8 weeks depending on scope.",
   },
   {
     question: "Do you provide maintenance?",
-    answer:
-      "Yes. We provide ongoing support and maintenance after launch.",
+    answer: "Yes. We provide ongoing support and maintenance after launch.",
   },
   {
     question: "Can I schedule a free consultation?",
-    answer:
-      "Yes. Use the Calendly section to book a free strategy session.",
+    answer: "Yes. Use the Calendly section to book a free strategy session.",
   },
 ];

@@ -1,5 +1,7 @@
+
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import {
   Download,
   ArrowRight,
@@ -13,6 +15,22 @@ import Button from "../Common/Button";
 
 export default function LeadMagnet() {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+
+  // Handler for Book Consultation button
+  const handleConsultationClick = () => {
+    const contactSection =
+      document.getElementById("contact-form") ||
+      document.getElementById("contact");
+
+    if (contactSection) {
+      // Smooth scroll to contact section
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // Navigate to /contact page if section isn't on current page
+      navigate("/contact");
+    }
+  };
 
   return (
     <>
@@ -35,7 +53,7 @@ export default function LeadMagnet() {
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: .6 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
 
@@ -95,11 +113,11 @@ export default function LeadMagnet() {
 
               <div className="space-y-4">
 
-                {guideFeatures.slice(0,4).map((item)=>{
+                {guideFeatures.slice(0, 4).map((item) => {
 
-                  const Icon=item.icon;
+                  const Icon = item.icon;
 
-                  return(
+                  return (
 
                     <div
                       key={item.id}
@@ -138,10 +156,10 @@ export default function LeadMagnet() {
           {/* RIGHT */}
 
           <motion.div
-            initial={{ opacity:0,x:40 }}
-            whileInView={{ opacity:1,x:0 }}
-            transition={{ duration:.6 }}
-            viewport={{ once:true }}
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
           >
 
             <span className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.25em] text-[#d4af37]">
@@ -176,11 +194,11 @@ export default function LeadMagnet() {
 
             <div className="mt-10 space-y-6">
 
-              {guideFeatures.map((item)=>{
+              {guideFeatures.map((item) => {
 
-                const Icon=item.icon;
+                const Icon = item.icon;
 
-                return(
+                return (
 
                   <div
                     key={item.id}
@@ -189,7 +207,7 @@ export default function LeadMagnet() {
 
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#d4af37]/10 text-[#d4af37]">
 
-                      <Icon size={22}/>
+                      <Icon size={22} />
 
                     </div>
 
@@ -239,7 +257,7 @@ export default function LeadMagnet() {
 
                 <div className="mb-2 flex gap-1 text-[#d4af37]">
 
-                  {[...Array(5)].map((_,i)=>
+                  {[...Array(5)].map((_, i) => (
 
                     <Star
                       key={i}
@@ -247,7 +265,7 @@ export default function LeadMagnet() {
                       size={16}
                     />
 
-                  )}
+                  ))}
 
                 </div>
 
@@ -263,17 +281,18 @@ export default function LeadMagnet() {
 
             <div className="mt-12 flex flex-wrap gap-5">
 
-              <Button onClick={()=>setOpen(true)}>
+              <Button onClick={() => setOpen(true)}>
 
-                <Download size={18}/>
+                <Download size={18} />
 
                 Download Guide
 
-                <ArrowRight size={18}/>
+                <ArrowRight size={18} />
 
               </Button>
 
               <button
+                onClick={handleConsultationClick}
                 className="
                 rounded-full
                 border

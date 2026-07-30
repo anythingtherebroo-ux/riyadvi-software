@@ -1,38 +1,41 @@
 import MainLayout from "../layouts/MainLayout";
 import SEO from "../components/SEO/SEO";
 
-import AboutHero from "../components/AboutPage/AboutHero";
-import CompanyStory from "../components/AboutPage/CompanyStory";
-import MissionVision from "../components/AboutPage/MissionVision";
-import CoreValues from "../components/AboutPage/CoreValues";
-import Timeline from "../components/AboutPage/Timeline";
-import WhyChooseUs from "../components/AboutPage/WhyChooseUs";
-import TeamSection from "../components/AboutPage/TeamSection";
-import Stats from "../components/AboutPage/Stats";
-import WorkProcess from "../components/AboutPage/WorkProcess";
-import AboutCTA from "../components/AboutPage/AboutCTA";
+import AboutHero from "../components/Aboutpage/AboutHero";
+import CompanyStory from "../components/Aboutpage/CompanyStory";
+import MissionVision from "../components/Aboutpage/MissionVision";
+import AwardsSection from "../components/Aboutpage/AwardsSection"; // <-- Notice 'AwardsSection' with an 's'
+import CoreValues from "../components/Aboutpage/CoreValues";
+import Stats from "../components/Aboutpage/Stats";
+import Timeline from "../components/Aboutpage/Timeline";
+import WhyChooseUs from "../components/Aboutpage/WhyChooseUs";
+import WorkProcess from "../components/Aboutpage/WorkProcess";
+import TeamSection from "../components/Aboutpage/TeamSection";
+import AboutCTA from "../components/Aboutpage/AboutCTA";
 
 function About() {
   return (
-     <>
+    <>
       <SEO
-        title="Riyadvi | Software Development Company"
-        description="Riyadvi provides web development, UI/UX design, AI solutions and digital marketing services."
-        keywords="software company, web development, react, nodejs, ui ux"
-        url="https://riyadvi.com/"/>
+        title="About Us | Riyadvi Software Technologies"
+        description="Founded in 2021, Riyadvi Software Technologies delivers modern web applications, mobile apps, AI solutions, and digital transformation for startups and enterprises."
+        keywords="about riyadvi, software development company, tech agency, software engineers"
+        url="https://riyadvi.com/about"
+      />
 
-    <MainLayout>
-      <AboutHero />
-      <CompanyStory />
-      <MissionVision />
-      <CoreValues />
-      <Timeline />
-      <WhyChooseUs />
-      <TeamSection />
-      <Stats />
-      <WorkProcess />
-      <AboutCTA />
-    </MainLayout>
+      <MainLayout>
+        <AboutHero />
+        <CompanyStory />
+        <MissionVision />
+        <AwardsSection /> {/* <-- Fixed here */}
+        <CoreValues />
+        <Stats />
+        <Timeline />
+        <WhyChooseUs />
+        <WorkProcess />
+        <TeamSection />
+        <AboutCTA />
+      </MainLayout>
     </>
   );
 }

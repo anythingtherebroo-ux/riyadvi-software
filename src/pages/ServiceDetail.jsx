@@ -11,7 +11,7 @@ import CTA from "../components/Servicepage/CTA";
 
 import { services } from "../components/Servicepage/ServiceData";
 
-function ServiceDetail() {
+export default function ServiceDetail() {
   const { slug } = useParams();
   const service = Object.values(services).find((item) => item.slug === slug);
 
@@ -24,20 +24,28 @@ function ServiceDetail() {
       <SEO
         title={`${service.title} | Riyadvi Software Technologies`}
         description={service.subtitle}
-        keywords={`${service.title.toLowerCase()}, riyadvi, software company`}
         url={`https://riyadvi.com/services/${service.slug}`}
       />
 
       <MainLayout>
+        {/* 1. Hero */}
         <ServiceHero service={service} />
+
+        {/* 2. Problem → Solution Breakdown */}
         <ProblemSolution service={service} />
+
+        {/* 3. Key Features */}
         <Features service={service} />
+
+        {/* 4. Industry Use Cases */}
         <Industries service={service} />
+
+        {/* 5. Tools / Tech Stack */}
         <TechStack service={service} />
+
+        {/* 6. CTA: Get a Quote */}
         <CTA service={service} />
       </MainLayout>
     </>
   );
 }
-
-export default ServiceDetail;

@@ -10,26 +10,28 @@ import FAQ from "../components/ContactPage/FAQ";
 import ContactCTA from "../components/ContactPage/ContactCTA";
 import WhatsAppWidget from "../components/ContactPage/WhatsAppWidget";
 
-export default function Contact() {
+function Contact() {
   return (
     <>
+      <SEO
+        title="Contact Us | Riyadvi Software Technologies"
+        description="Get in touch with Riyadvi Software Technologies. Book a free consultation, request a project quote, or chat with our software experts."
+        keywords="contact riyadvi, book consultation, software agency contact, software quote"
+        url="https://riyadvi.com/contact"
+      />
 
-     <SEO
-        title="Riyadvi | Software Development Company"
-        description="Riyadvi provides web development, UI/UX design, AI solutions and digital marketing services."
-        keywords="software company, web development, react, nodejs, ui ux"
-        url="https://riyadvi.com/"/>
-
-    <MainLayout>
-      <ContactHero />
-      <ContactCards />
-      <ContactForm />
-      <CalendlySection />
-      <LocationSection />
-      <FAQ />
-      <ContactCTA />
-      <WhatsAppWidget />
-    </MainLayout>
-  </>
+      <MainLayout>
+        <ContactHero />
+        <ContactCards />
+        <ContactForm />
+        <CalendlySection />
+        <LocationSection />
+        <FAQ />
+        <ContactCTA />
+        <WhatsAppWidget />
+      </MainLayout>
+    </>
   );
 }
+
+export default Contact;

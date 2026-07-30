@@ -5,9 +5,8 @@ import {
   Headset,
 } from "lucide-react";
 
-/* ===========================
-   Hero Statistics
-=========================== */
+/* 
+   Hero Statistics*/
 
 export const stats = [
   {
@@ -36,9 +35,9 @@ export const stats = [
   },
 ];
 
-/* ===========================
+/* 
    Hero Features
-=========================== */
+ */
 
 export const heroFeatures = [
   "Modern UI/UX Design",
@@ -49,9 +48,7 @@ export const heroFeatures = [
   "Lifetime Technical Support",
 ];
 
-/* ===========================
-   Terminal Build Output
-=========================== */
+
 
 export const terminalLines = [
   "Initializing project...",

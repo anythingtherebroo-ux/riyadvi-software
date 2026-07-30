@@ -1,63 +1,27 @@
 const express = require("express");
-
 const router = express.Router();
-
-
 const upload = require("../middleware/upload");
-
-
 const {
-
-applyCareer,
-
-getApplications,
-
-deleteApplication
-
+  applyCareer,
+  getApplications,
+  deleteApplication,
 } = require("../controllers/careerController");
 
+// Helper middleware for Multer error handling
+const handleUpload = (req, res, next) => {
+  upload.single("resume")(req, res, (err) => {
+    if (err) {
+      return res.status(400).json({
+        success: false,
+        message: err.message,
+      });
+    }
+    next();
+  });
+};
 
-
-
-
-// CREATE APPLICATION
-
-router.post(
-
-"/",
-
-upload.single("resume"),
-
-applyCareer
-
-);
-
-
-
-
-// GET APPLICATIONS
-
-router.get(
-
-"/",
-
-getApplications
-
-);
-
-
-
-
-// DELETE APPLICATION
-
-router.delete(
-
-"/:id",
-
-deleteApplication
-
-);
-
-
+router.post("/", handleUpload, applyCareer);
+router.get("/", getApplications);
+router.delete("/:id", deleteApplication);
 
 module.exports = router;

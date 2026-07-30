@@ -1,4 +1,3 @@
-/* Google Fonts (must be the first rule — @import always precedes other CSS) */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap");
 @import "tailwindcss";
 
@@ -12,21 +11,16 @@
   --color-muted: #9ca3af;
 }
 
-* {
-  margin: 0;
-  padding: 0;
+/* Global Reset & Centering Safety */
+*, ::before, ::after {
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-  width: 100%;
-}
-
-body {
+html, body {
+  margin: 0;
+  padding: 0;
   background: #080808;
-  color: white;
+  color: #ffffff;
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
   width: 100%;
@@ -36,67 +30,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
 }
 
-button {
-  cursor: pointer;
-  font-family: "Montserrat", sans-serif;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #080808;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #d4af37;
-  border-radius: 20px;
-}
-
-::selection {
-  background: #d4af37;
-  color: black;
-}
-
-/* --- Premium extras --- */
-
-.bg-grid {
-  background-image:
-    linear-gradient(to right, rgba(212, 175, 55, 0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(212, 175, 55, 0.06) 1px, transparent 1px);
-  background-size: 48px 48px;
-}
-
-.text-gradient-gold {
-  background: linear-gradient(90deg, #f4e5a1 0%, #d4af37 55%, #a9822a 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-/* Global fix: grid/flex children default to min-width: auto, which lets
-   wide intrinsic content (like the font-mono terminal card) force the
-   whole grid — and the page — wider than the viewport. This resets that
-   so columns can actually shrink to fit. */
+/* Flex & Grid intrinsic width safety reset */
 .grid > *,
 .flex > * {
   min-width: 0;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
 }

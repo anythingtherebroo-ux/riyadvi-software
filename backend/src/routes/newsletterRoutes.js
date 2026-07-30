@@ -1,58 +1,19 @@
 const express = require("express");
-
 const router = express.Router();
 
-
-
 const {
-
-subscribeNewsletter,
-
-getSubscribers,
-
-deleteSubscriber
-
+  subscribeNewsletter,
+  getSubscribers,
+  deleteSubscriber,
 } = require("../controllers/newsletterController");
 
+// CREATE SUBSCRIBER
+router.post("/", subscribeNewsletter);
 
+// GET ALL SUBSCRIBERS
+router.get("/", getSubscribers);
 
-
-// CREATE
-
-router.post(
-
-"/",
-
-subscribeNewsletter
-
-);
-
-
-
-
-// GET ALL
-
-router.get(
-
-"/",
-
-getSubscribers
-
-);
-
-
-
-
-// DELETE
-
-router.delete(
-
-"/:id",
-
-deleteSubscriber
-
-);
-
-
+// DELETE SUBSCRIBER
+router.delete("/:id", deleteSubscriber);
 
 module.exports = router;

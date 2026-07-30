@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 
 
-function Blog(){
+function Blogs(){
 
 
 const [blogs,setBlogs] = useState([]);
@@ -303,4 +303,4 @@ blog.createdAt
 }
 
 
-export default Blog;
+export default Blogs;
