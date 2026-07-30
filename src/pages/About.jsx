@@ -1,17 +1,17 @@
 import MainLayout from "../layouts/MainLayout";
 import SEO from "../components/SEO/SEO";
 
-import AboutHero from "../components/AboutPage/AboutHero";
-import CompanyStory from "../components/AboutPage/CompanyStory";
-import MissionVision from "../components/AboutPage/MissionVision";
-import AwardsSection from "../components/AboutPage/AwardsSection";
-import CoreValues from "../components/AboutPage/CoreValues";
-import Stats from "../components/AboutPage/Stats";
-import Timeline from "../components/AboutPage/Timeline";
-import WhyChooseUs from "../components/AboutPage/WhyChooseUs";
-import WorkProcess from "../components/AboutPage/WorkProcess";
-import TeamSection from "../components/AboutPage/TeamSection";
-import AboutCTA from "../components/AboutPage/AboutCTA";
+import AboutHero from "../components/AboutPageContent/AboutHero";
+import CompanyStory from "../components/AboutPageContent/CompanyStory";
+import MissionVision from "../components/AboutPageContent/MissionVision";
+import AwardsSection from "../components/AboutPageContent/AwardsSection";
+import CoreValues from "../components/AboutPageContent/CoreValues";
+import Stats from "../components/AboutPageContent/Stats";
+import Timeline from "../components/AboutPageContent/Timeline";
+import WhyChooseUs from "../components/AboutPageContent/WhyChooseUs";
+import WorkProcess from "../components/AboutPageContent/WorkProcess";
+import TeamSection from "../components/AboutPageContent/TeamSection";
+import AboutCTA from "../components/AboutPageContent/AboutCTA";
 
 function About() {
   return (
