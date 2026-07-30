@@ -70,6 +70,9 @@ function AppRoutes() {
         <Route path="/admin/portfolio/create" element={<CreatePortfolio />} />
         <Route path="/admin/portfolio/edit/:id" element={<EditPortfolio />} />
       </Route>
+
+      {/* Fallback Route */}
+      <Route path="*" element={<Home />} />
     </Routes>
   );
 }
