@@ -7,6 +7,7 @@ const path = require("path");
 const applyCareer = async (req, res) => {
   try {
     if (!req.file) {
+            console.log("Career API Hit");
       return res.status(400).json({
         success: false,
         message: "Resume is required.",
@@ -65,8 +66,14 @@ const applyCareer = async (req, res) => {
       data: career,
     });
   } catch (error) {
+
     console.error("Career Application Error:");
     console.error(error);
+
+    
+    console.error(error);
+console.error(error.stack);
+
 
     if (req.file && fs.existsSync(req.file.path)) {
       fs.unlinkSync(req.file.path);
