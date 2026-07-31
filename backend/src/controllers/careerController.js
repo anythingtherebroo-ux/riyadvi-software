@@ -13,7 +13,6 @@ const applyCareer = async (req, res) => {
       });
     }
 
-    // Normalize path for Windows compatibility (convert \ to /)
     const normalizedPath = req.file.path.replace(/\\/g, "/");
 
     const career = new Career({
@@ -29,7 +28,7 @@ const applyCareer = async (req, res) => {
 
     await career.save();
 
-    // Send email notification
+    // Send email (don't fail the request if email fails)
     try {
       await transporter.sendMail({
         from: `"Riyadvi Careers" <${process.env.EMAIL_USER}>`,
@@ -41,6 +40,7 @@ const applyCareer = async (req, res) => {
           <p><b>Name:</b> ${req.body.fullName}</p>
           <p><b>Email:</b> ${req.body.email}</p>
           <p><b>Phone:</b> ${req.body.phone}</p>
+          <p><b>Department:</b> ${req.body.department}</p>
           <p><b>Position:</b> ${req.body.position}</p>
           <p><b>Experience:</b> ${req.body.experience}</p>
           <p><b>Cover Letter:</b> ${req.body.coverLetter || "N/A"}</p>
@@ -52,22 +52,27 @@ const applyCareer = async (req, res) => {
           },
         ],
       });
+
+      console.log("Career email sent successfully.");
     } catch (emailError) {
-      console.error("Email sending failed:", emailError);
-      // Optional: application is saved, but email notification logged error
+      console.error("Email sending failed:");
+      console.error(emailError);
     }
 
-    res.status(201).json({
+    return res.status(201).json({
       success: true,
-      message: "Application submitted successfully",
+      message: "Application submitted successfully.",
       data: career,
     });
   } catch (error) {
-    // Cleanup file if DB save fails
+    console.error("Career Application Error:");
+    console.error(error);
+
     if (req.file && fs.existsSync(req.file.path)) {
       fs.unlinkSync(req.file.path);
     }
-    res.status(500).json({
+
+    return res.status(500).json({
       success: false,
       message: error.message,
     });
