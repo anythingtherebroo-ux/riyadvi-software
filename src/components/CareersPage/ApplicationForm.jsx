@@ -78,7 +78,7 @@ export default function ApplicationForm() {
       formData.append("resume", form.resume);
 
       // Axios automatically sets 'multipart/form-data' with correct boundary
-      const response = await API.post("/careers", formData);
+      const response = await API.post("/career", formData);
 
       console.log("CAREER APPLICATION SUCCESS:", response.data);
 
