@@ -4,10 +4,14 @@ const fs = require("fs");
 const path = require("path");
 
 // CREATE CAREER APPLICATION
+
 const applyCareer = async (req, res) => {
   try {
+    console.log("========== NEW APPLICATION ==========");
+    console.log("BODY:", req.body);
+    console.log("FILE:", req.file);
+
     if (!req.file) {
-            console.log("Career API Hit");
       return res.status(400).json({
         success: false,
         message: "Resume is required.",
@@ -27,57 +31,32 @@ const applyCareer = async (req, res) => {
       resume: normalizedPath,
     });
 
+    console.log("Saving to MongoDB...");
     await career.save();
+    console.log("MongoDB Save Success");
 
-    // Send email (don't fail the request if email fails)
-    try {
-      await transporter.sendMail({
-        from: `"Riyadvi Careers" <${process.env.EMAIL_USER}>`,
-        to: process.env.EMAIL_USER,
-        replyTo: req.body.email,
-        subject: `New Job Application - ${req.body.fullName}`,
-        html: `
-          <h2>New Job Application</h2>
-          <p><b>Name:</b> ${req.body.fullName}</p>
-          <p><b>Email:</b> ${req.body.email}</p>
-          <p><b>Phone:</b> ${req.body.phone}</p>
-          <p><b>Department:</b> ${req.body.department}</p>
-          <p><b>Position:</b> ${req.body.position}</p>
-          <p><b>Experience:</b> ${req.body.experience}</p>
-          <p><b>Cover Letter:</b> ${req.body.coverLetter || "N/A"}</p>
-        `,
-        attachments: [
-          {
-            filename: req.file.originalname,
-            path: req.file.path,
-          },
-        ],
-      });
-
-      console.log("Career email sent successfully.");
-    } catch (emailError) {
-      console.error("Email sending failed:");
-      console.error(emailError);
-    }
+    // TEMPORARILY DISABLE EMAIL
+    /*
+    await transporter.sendMail({
+      from: `"Riyadvi Careers" <${process.env.EMAIL_USER}>`,
+      to: process.env.EMAIL_USER,
+      replyTo: req.body.email,
+      subject: `New Job Application - ${req.body.fullName}`,
+      html: `<h2>New Application</h2>`,
+    });
+    */
 
     return res.status(201).json({
       success: true,
-      message: "Application submitted successfully.",
+      message: "Application submitted successfully",
       data: career,
     });
   } catch (error) {
-
-    console.error("Career Application Error:");
-    console.error(error);
-
-    
-    console.error(error);
-console.error(error.stack);
-
-
-    if (req.file && fs.existsSync(req.file.path)) {
-      fs.unlinkSync(req.file.path);
-    }
+    console.log("=================================");
+    console.log("CAREER ERROR");
+    console.log(error);
+    console.log(error.stack);
+    console.log("=================================");
 
     return res.status(500).json({
       success: false,
